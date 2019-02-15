@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import GastoPanel from './components/GastoPanel/GastoPanel';
 import ItemList from './components/ItemList/ItemList';
+import Resumen from './components/Resumen/Resumen';
+import Header from './components/Header/Header';
+
 import './App.css';
 
 const item1 = {
@@ -70,10 +73,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GastoPanel today={this.state.day} dateUpdate={this.dateUpdate} onChange={this.handleChange} confirmClick={this.handleSubmit}/>
-        <ItemList items={this.state.items}/>
+      <Header />
+        <div className="alineado" >
+          <GastoPanel today={this.state.day} dateUpdate={this.dateUpdate} onChange={this.handleChange} confirmClick={this.handleSubmit} />
+          <ItemList items={this.state.items}/>
+          <Resumen />
+        </div>
         {/* <IngresoPanel/>
-        <ListadoPanel/> */}
+          <ListadoPanel/> */}
       </div>
     );
   }

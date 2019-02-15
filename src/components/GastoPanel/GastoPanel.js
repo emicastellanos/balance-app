@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const GastoPanel = ({today, dateUpdate, confirmClick,onChange}) => {
     return (
-        <article className="br2 ma4 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 shadow-5 bg-near-white">
+        <article className="br2 ma4 ba dark-gray b--black-10 mv4 fl w-20 w-50-m w-25-l mw5 shadow-5 bg-near-white" style={{"height":"fit-content"}}>
             <form className="pa4 pb2" >
                 <div className="measure">
                     <label htmlFor="description" className="ph1 f5 b db mb2 navy">Descripcion</label>

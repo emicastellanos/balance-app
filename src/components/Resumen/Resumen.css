@@ -1,0 +1,11 @@
+.resumen{
+    border-color: black;
+    align-content: center;
+    display: block;
+    padding-left: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    border-style: solid;
+    height: 20rem;
+}

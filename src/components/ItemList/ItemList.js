@@ -4,7 +4,7 @@ import './ItemList.css';
 
 const ItemList = ({items}) => {
     return (
-        <div className="pa4">
+        <div className="pa4 fl w-60 shadow-5">
             <table className="fixed_header" cellSpacing="0">
             <thead>
                 <tr>
@@ -14,7 +14,7 @@ const ItemList = ({items}) => {
                     <th className="fw6 bb b--black-20 tl pb3 pr3 ">Realizado</th>
                 </tr>
             </thead>
-            <tbody className="lh-copy" style={{overflow:'auto', height:'500px', display:'block'}}>
+            <tbody className="lh-copy body">
                 { items.map ( (item, index) => <Item item={item} key={index}/> ) }
             </tbody>
             

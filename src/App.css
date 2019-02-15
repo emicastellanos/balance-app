@@ -12,3 +12,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.alineado{
+  display:flex;
+  flex-direction:row;
+  height: 50rem; 
+}

@@ -7,8 +7,8 @@
 .fixed_header tbody{
     display:block;
     width: 100%;
-    overflow: auto;
-    height: 100px;
+    overflow-y: scroll;
+    height: 200rem;
 }
   
 .fixed_header thead tr {
@@ -27,7 +27,7 @@ width: 200px;
 }
 
 .body{
-    overflow:auto;
-    /* height:80%; */
-    display:block;
+    /* overflow:auto;
+    height:80%;
+    display:block; */
 }

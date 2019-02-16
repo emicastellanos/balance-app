@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import GastoPanel from './components/GastoPanel/GastoPanel';
 import ItemList from './components/ItemList/ItemList';
 import Resumen from './components/Resumen/Resumen';
-import Header from './components/Header/Header';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 import './App.css';
 
@@ -68,19 +72,28 @@ class App extends Component {
     
   }
 
-
-
   render() {
     return (
       <div className="App">
-      <Header />
-        <div className="alineado" >
-          <GastoPanel today={this.state.day} dateUpdate={this.dateUpdate} onChange={this.handleChange} confirmClick={this.handleSubmit} />
-          <ItemList items={this.state.items}/>
-          <Resumen />
-        </div>
-        {/* <IngresoPanel/>
-          <ListadoPanel/> */}
+        <Navbar bg="dark" expand="lg">
+          <Navbar.Brand href="#home">Home</Navbar.Brand>
+        </Navbar>
+
+        <Container>
+          <Row>
+            <Col>
+              <GastoPanel today={this.state.day} dateUpdate={this.dateUpdate} onChange={this.handleChange} confirmClick={this.handleSubmit} />
+            </Col>
+            <Col >
+              <ItemList items={this.state.items}/> 
+            </Col>
+            <Col>
+              <Resumen />
+            </Col>
+          </Row>
+        </Container>
+          {/* <IngresoPanel/>
+            <ListadoPanel/> */}
       </div>
     );
   }

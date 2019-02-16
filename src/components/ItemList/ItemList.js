@@ -1,24 +1,25 @@
-import React from 'react'
+import React from 'react';
 import Item from '../Item/Item';
 import './ItemList.css';
+import Table from 'react-bootstrap/Table'
 
+// className="fw6 bb b--black-20 tl pb3 pr3 "
 const ItemList = ({items}) => {
     return (
-        <div className="pa4 fl w-60 shadow-5">
-            <table className="fixed_header" cellSpacing="0">
-            <thead>
-                <tr>
-                    <th className="fw6 bb b--black-20 tl pb3 pr3 ">Monto $</th>
-                    <th className="fw6 bb b--black-20 tl pb3 pr3 ">Descripcion</th>
-                    <th className="fw6 bb b--black-20 tl pb3 pr3 ">Fecha</th>
-                    <th className="fw6 bb b--black-20 tl pb3 pr3 ">Realizado</th>
-                </tr>
-            </thead>
-            <tbody className="lh-copy body">
-                { items.map ( (item, index) => <Item item={item} key={index}/> ) }
-            </tbody>
-            
-            </table>
+        <div className="pa4 shadow-5 table-wrapper-scroll-y">
+            <Table striped bordered hover size="sm">
+                <thead>
+                    <tr>
+                        <th style={{"width":"20%"}}>Monto $</th>
+                        <th style={{"width":"50%"}}>Descripcion</th>
+                        <th style={{"width":"20%"}}>Fecha</th>
+                        <th style={{"width":"10%"}}>Realizado</th>
+                    </tr>
+                </thead>
+                <tbody className="lh-copy">
+                    { items.map ( (item, index) => <Item item={item} key={index}/> ) }
+                </tbody>
+            </Table>
         </div>
     );
 }
